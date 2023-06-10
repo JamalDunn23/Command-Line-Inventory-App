@@ -1,121 +1,44 @@
 [
-    {
-        "uId": "-8BxtDi",
-        "name": "Mouse",
-        "priceInCents": "495.00",
-        "inStock": true,
-        "ShippingAvailability": true
-    },
-    {
-        "uId": "gAsbMH3",
-        "name": "Pizza",
-        "priceInCents": "2.00",
-        "inStock": true,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "y7VPaE-",
-        "name": "Bacon",
-        "priceInCents": "151.00",
-        "inStock": false,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "HgUdfGQ",
-        "name": "Bike",
-        "priceInCents": "799.00",
-        "inStock": true,
-        "ShippingAvailability": true
-    },
-    {
-        "uId": "a0-v7Pz",
-        "name": "Car",
-        "priceInCents": "404.00",
-        "inStock": true,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "E6XXM2x",
-        "name": "Table",
-        "priceInCents": "46.00",
-        "inStock": false,
-        "ShippingAvailability": true
-    },
-    {
-        "uId": "zxS6fA-",
-        "name": "Computer",
-        "priceInCents": "401.00",
-        "inStock": false,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "MbMycMV",
-        "name": "Car",
-        "priceInCents": "1.00",
-        "inStock": false,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "U5tnQfS",
-        "name": "Salad",
-        "priceInCents": "59.00",
-        "inStock": true,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "QnEjwPS",
-        "name": "Pizza",
-        "priceInCents": "114.00",
-        "inStock": false,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "-PWzCBR",
-        "name": "Bacon",
-        "priceInCents": "455.00",
-        "inStock": false,
-        "ShippingAvailability": true
-    },
-    {
-        "uId": "LQFMYai",
-        "name": "Bacon",
-        "priceInCents": "822.00",
-        "inStock": true,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "VwO2cIB",
-        "name": "Car",
-        "priceInCents": "523.00",
-        "inStock": false,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "o_Tz6GO",
-        "name": "Pizza",
-        "priceInCents": "763.00",
-        "inStock": true,
-        "ShippingAvailability": true
-    },
-    {
-        "uId": "418-_zS",
-        "name": "Pizza",
-        "priceInCents": "404.00",
-        "inStock": true,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "YKmeQ_M",
-        "name": "Chicken",
-        "priceInCents": "964.00",
-        "inStock": true,
-        "ShippingAvailability": false
-    },
-    {
-        "uId": "C5biRyG",
-        "name": "Shoes",
-        "priceInCents": "379.00",
-        "inStock": false,
-        "ShippingAvailability": false
-    }
+  {
+    "uId": "-8BxtDi",
+    "name": "Mouse",
+    "priceInCents": "495.00",
+    "inStock": true,
+    "ShippingAvailability": true
+  },
+  {
+    "uId": "Xg4-LG9",
+    "name": "Soap",
+    "priceInCents": "243.00",
+    "inStock": false,
+    "ShippingAvailability": false
+  },
+  {
+    "uId": "KSex87M",
+    "name": "Hat",
+    "priceInCents": "972.00",
+    "inStock": false,
+    "ShippingAvailability": false
+  },
+  {
+    "uId": "WvGXiyw",
+    "name": "Chair",
+    "priceInCents": "839.00",
+    "inStock": false,
+    "ShippingAvailability": true
+  },
+  {
+    "uId": "50o5CBT",
+    "name": "jackie",
+    "priceInCents": "5748",
+    "inStock": "false",
+    "ShippingAvailability": "true"
+  },
+  {
+    "uId": "BGe8jWU",
+    "name": "Pop_Tarts",
+    "priceInCents": "7866",
+    "inStock": "true",
+    "ShippingAvailability": "false"
+  }
 ]

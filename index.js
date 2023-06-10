@@ -16,6 +16,10 @@ function run() {
 
     const action = process.argv[2];
     const userProd = process.argv[3];
+    const userProd_2 = process.argv[4];
+    const userProd_3 = process.argv[5];
+    const userProd_4 = process.argv[6];
+    const userProd_5 = process.argv[7];
 
 
     switch (action) {
@@ -26,12 +30,12 @@ function run() {
             break;
 
         case "show":
-            const cartViewShow = show(products, userProd);
+            const cartViewShow = show(products, userProd, userProd_2);
             inform(cartViewShow);
             break;
 
         case "create":
-            updatedCart = create(userProd);
+            updatedCart = create(products, userProd, userProd_2, userProd_3, userProd_4 );
             break;
 
         case "update":

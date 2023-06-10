@@ -1,37 +1,43 @@
 const { nanoid } = require("nanoid");
-// const { data } = require("../data/billing.json")
+const { data } = require("../data/billing.json")
 const { faker } = require("@faker-js/faker")
 inform = console.log;
 const { writeJSONFile, readJSONFile, addToInventory } = require("./helpers")
 
 
 ///Reading
-function index(guest) {
-    guest.map((eachGuest) => `Unique Id: ${eachGuest.id} name:${eachGuest.name} priceInCents: ${eachGuest.priceInCents}  inStock: ${eachGuest.inStock} Shipping Availablity: ${eachGuest.ShippingAvailability}`);
+function index(product) {
+    product.map((eachProd) => `Unique Id: ${eachProd.id} name:${eachProd.name} priceInCents: ${eachProd.priceInCents}  inStock: ${eachProd.inStock} Shipping Availablity: ${eachProd.ShippingAvailability}`);
 }
 //index(guest)
 
 
-function show(arrayOfProducts, prodUId) {
+function show(arrayOfProducts, userProd) {
 
-    const prodToFind = arrayOfProducts.find((prod) => prod.id === prodUId);
+    const userProd_2 = process.argv[3]
 
-    if (prodToFind) {
-        return "Product ID: " + prodToFind.uId + "\n" + "Name Of Product: " + prodToFind.name + "\n" + "Price Of Product: $" + prodToFind.priceInCents + "\n" + "In Stock: " + prodToFind.inStock + "\n" + "Shipping: " + prodToFind.ShippingAvailability;
-    } else {
-        return "Product Not Found"
+    const prodToFind = arrayOfProducts.find((prod) => prod.id === userProd);
+
+    if (process.argv[3] === userProd) {
+
+        if (prodToFind) {
+            return "Product ID: " + prodToFind.uId + "\n" + "Name Of Product: " + prodToFind.name + "\n" + "Price Of Product: $" + prodToFind.priceInCents + "\n" + "In Stock: " + prodToFind.inStock + "\n" + "Shipping: " + prodToFind.ShippingAvailability;
+        } else {
+            return "Products Not Found"
+        }
+
     }
 }
 //show()
 
-function create() {
+function create(products, userProd, userProd_2, userProd_3, userProd_4) {
 
     const newObj = {
         uId: nanoid(7),
-        name: `${faker.commerce.product()}`,
-        priceInCents: faker.commerce.price(),
-        inStock: faker.datatype.boolean(),
-        ShippingAvailability: faker.datatype.boolean()
+        name: userProd,
+        priceInCents: userProd_2,
+        inStock: userProd_3,
+        ShippingAvailability: userProd_4
     };
     const product = newObj
     addToInventory(product)
@@ -56,9 +62,12 @@ function destroy(/*argv*/) {
 }
 //destroy()
 
-function edit(products, prodUId) {
+function edit() {
+
+    const id = process.argv[3];
+    const products = readJSONFile()
     const index = products.findIndex((item) => item.uId === prodUId);
-    if (index === -1) {
+    if (index < -1) {
 
         products.splice(index, 1);
         // products[index].uId = prodUId;
