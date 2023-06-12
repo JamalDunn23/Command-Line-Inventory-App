@@ -7,14 +7,14 @@ const { writeJSONFile, readJSONFile, addToInventory } = require("./helpers")
 
 ///Reading
 function index(product) {
-     return product.map((eachProd) => `Unique Id: ${eachProd.uId}  name: ${eachProd.name}  priceInCents: ${eachProd.priceInCents}  inStock: ${eachProd.inStock}  Shipping Availablity: ${eachProd.ShippingAvailability}`).join("\n")
-    
+    return product.map((eachProd) => `Unique Id: ${eachProd.uId}  name: ${eachProd.name}  priceInCents: ${eachProd.priceInCents}  inStock: ${eachProd.inStock}  Shipping Availablity: ${eachProd.ShippingAvailability}`).join("\n")
+
 }
 //index(guest)
 
 
 function show(arrayOfProducts, userProd) {
- 
+
     //const userProd_2 = process.argv[3]
 
     const prodToFind = arrayOfProducts.find((prod) => prod.uId === userProd);
@@ -63,26 +63,28 @@ function destroy(/*argv*/) {
 }
 //destroy()
 
-function edit( userProd_2, userProd_3,userProd_4,userProd_5) {
+function edit(products, userProd, userProd_2, userProd_3, userProd_4, userProd_5) {
 
-    const id = process.argv[3];
-    const products = readJSONFile()
-    const index = products.findIndex((item) => item.uId === id);
-    
-    if (index < -1) {
 
-        //products.splice(index, 1);
-         products[index].name = userProd_2;
-         products[index].priceInCents = userProd_3;
-         products[index].inStock = userProd_4;
-         products[index].ShippingAvailability = userProd_5;
-         //writeJSONFile(products)
+    const index = products.findIndex((item) => item.uId === userProd);
+
+
+
+    if (index !== -1) {
+
+        products[index].name = userProd_2;
+        products[index].priceInCents = userProd_3;
+        products[index].inStock = userProd_4;
+        products[index].ShippingAvailability = userProd_5;
+        writeJSONFile(products)
 
         inform("Cart successfully updated");
+        console.log(products)
         return products;
     } else {
 
         inform("Item not found. No action taken");
+        console.log(products)
         return products;
     }
 }

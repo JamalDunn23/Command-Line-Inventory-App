@@ -6,7 +6,7 @@ const { writeJSONFile, readJSONFile } = require("./src/helpers")
 const { index, show, create, destroy, edit, updatedCart, total } = require("./src/controller")
 
 function run() {
-    inform("Welcome To Vintage All-Purpose Store🥼🕹️📡🍕🥝👖\n\n");
+    inform("Welcome To Vintage All-Purpose Store🥼🕹️📡🍕🥝👖\n");
     inform("We Have Whatever You Need, Delivered With Speed!!🏎️💨💨\n\n");
 
     let products = readJSONFile("./data", "billing.json")
@@ -39,7 +39,7 @@ function run() {
             break;
 
         case "update":
-            updatedCart = edit(products, userProd, userProd_2, userProd_3, userProd_4);
+            updatedCart = edit(products, userProd, userProd_2, userProd_3, userProd_4, userProd_5);
             break;
 
         case "destroy":
