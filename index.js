@@ -30,7 +30,7 @@ function run() {
             break;
 
         case "show":
-            const cartViewShow = show(products, userProd, userProd_2);
+            const cartViewShow = show(products, userProd);
             inform(cartViewShow);
             break;
 

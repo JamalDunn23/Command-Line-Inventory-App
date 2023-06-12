@@ -11,8 +11,11 @@
     "show": "node index.js show",
     "update": "node index.js update",
     "destroy": "node index.js destroy",
-    "deleteCart": "node index.js deleteCart",
-    "total": "node index.js total"
+    "clearCart": "node shopingCart.js clearCart",
+    "updateTotal":"node shopingCart.js updateTotal",
+    "addToCart": "node shopingCart.js addToCart",
+    "updateQuanity": "node shopingCart.js updateQuanity",
+    "promoCode": "node shopingCart.js promoCode"
   },
   "keywords": [],
   "author": "Jamal Dunn",
