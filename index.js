@@ -39,7 +39,7 @@ function run() {
             break;
 
         case "update":
-            updatedCart = edit(products, userProd, process.argv[4]);
+            updatedCart = edit(products, userProd, userProd_2, userProd_3, userProd_4);
             break;
 
         case "destroy":

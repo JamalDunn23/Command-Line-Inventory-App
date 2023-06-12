@@ -63,24 +63,25 @@ function destroy(/*argv*/) {
 }
 //destroy()
 
-function edit() {
+function edit( userProd_2, userProd_3,userProd_4,userProd_5) {
 
     const id = process.argv[3];
     const products = readJSONFile()
-    const index = products.findIndex((item) => item.uId === prodUId);
+    const index = products.findIndex((item) => item.uId === id);
+    
     if (index < -1) {
 
-        products.splice(index, 1);
-        // products[index].uId = prodUId;
-        // products[index].name = updatedProduct;
-        // products[index].priceInCents = price;
-        // products[index].inStock = inStock;
-        // products[index].ShippingAvailability = ShippingAvailability;
-
+        //products.splice(index, 1);
+         products[index].name = userProd_2;
+         products[index].priceInCents = userProd_3;
+         products[index].inStock = userProd_4;
+         products[index].ShippingAvailability = userProd_5;
+         //writeJSONFile(products)
 
         inform("Cart successfully updated");
         return products;
     } else {
+
         inform("Item not found. No action taken");
         return products;
     }
