@@ -1,26 +1,5 @@
 [
   {
-    "uId": "-8BxtDi",
-    "name": "Mouse",
-    "priceInCents": "495.00",
-    "inStock": true,
-    "ShippingAvailability": true
-  },
-  {
-    "uId": "Xg4-LG9",
-    "name": "Soap",
-    "priceInCents": "243.00",
-    "inStock": false,
-    "ShippingAvailability": false
-  },
-  {
-    "uId": "KSex87M",
-    "name": "Hat",
-    "priceInCents": "972.00",
-    "inStock": false,
-    "ShippingAvailability": false
-  },
-  {
     "uId": "WvGXiyw",
     "name": "Chair",
     "priceInCents": "839.00",

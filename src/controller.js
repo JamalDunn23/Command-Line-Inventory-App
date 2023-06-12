@@ -7,21 +7,22 @@ const { writeJSONFile, readJSONFile, addToInventory } = require("./helpers")
 
 ///Reading
 function index(product) {
-    product.map((eachProd) => `Unique Id: ${eachProd.id} name:${eachProd.name} priceInCents: ${eachProd.priceInCents}  inStock: ${eachProd.inStock} Shipping Availablity: ${eachProd.ShippingAvailability}`);
+     return product.map((eachProd) => `Unique Id: ${eachProd.uId}  name: ${eachProd.name}  priceInCents: ${eachProd.priceInCents}  inStock: ${eachProd.inStock}  Shipping Availablity: ${eachProd.ShippingAvailability}`).join("\n")
+    
 }
 //index(guest)
 
 
 function show(arrayOfProducts, userProd) {
+ 
+    //const userProd_2 = process.argv[3]
 
-    const userProd_2 = process.argv[3]
+    const prodToFind = arrayOfProducts.find((prod) => prod.uId === userProd);
 
-    const prodToFind = arrayOfProducts.find((prod) => prod.id === userProd);
-
-    if (process.argv[3] === userProd) {
+    if (process.argv[3]) {
 
         if (prodToFind) {
-            return "Product ID: " + prodToFind.uId + "\n" + "Name Of Product: " + prodToFind.name + "\n" + "Price Of Product: $" + prodToFind.priceInCents + "\n" + "In Stock: " + prodToFind.inStock + "\n" + "Shipping: " + prodToFind.ShippingAvailability;
+            return "Product ID: " + prodToFind.uId + "\n" + "Name Of Product: " + prodToFind.name + "\n" + "Price Of Product: ¢" + prodToFind.toFixed(2).priceInCents + "\n" + "In Stock: " + prodToFind.inStock + "\n" + "Shipping: " + prodToFind.ShippingAvailability;
         } else {
             return "Products Not Found"
         }
