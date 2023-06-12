@@ -1,7 +1,4 @@
 const inform = console.log
-//const readline = require("readline")
-// const {faker} = require("@faker-js/faker")
-
 const { writeJSONFile, readJSONFile } = require("./src/helpers")
 const { index, show, create, destroy, edit, updatedCart, total } = require("./src/controller")
 

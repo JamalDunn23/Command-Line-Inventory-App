@@ -1,11 +1,12 @@
 const { nanoid } = require("nanoid");
-const { data } = require("../data/billing.json")
-const { faker } = require("@faker-js/faker")
+const { chalk } = require("chalk")
+
 inform = console.log;
 const { writeJSONFile, readJSONFile, addToInventory } = require("./helpers")
 
 
 function index(product) {
+
     return product.map((eachProd) => `Unique Id: ${eachProd.uId}  name: ${eachProd.name}  priceInCents: ${eachProd.priceInCents}  inStock: ${eachProd.inStock}  Shipping Availablity: ${eachProd.ShippingAvailability}`).join("\n")
 
 }
@@ -14,12 +15,13 @@ function index(product) {
 function show(arrayOfProducts, userProd) {
 
 
-    const prodToFind = arrayOfProducts.filter((prod) => prod.uId === userProd);
+    const prodToFind = arrayOfProducts.find((prod) => prod.uId === userProd || prod.name === userProd);
 
-    for (let prodInfo of prodToFind) {
-        return `Product ID: ${chalk.purple(prodInfo.uId)} \n Name Of Product: ${chalk.blue(prodInfo.name)} \n Price Of Product ${chalk.purple(prodInfo.priceInCents)} \n In Stock: ${chalk.blue(prodInfo.inStock)} \n Shipping: ${chalk.blue(prodInfo.ShippingAvailability)}`
+    if (prodToFind) {
+        return ` Product ID: ${prodToFind.uId} \n Name Of Product: ${prodToFind.name} \n Price ${prodToFind.priceInCents} \n In Stock: ${prodToFind.inStock} \n Shipping: ${prodToFind.ShippingAvailability}`
+    } else {
+        return "Products Not Found"
     }
-    return "Products Not Found"
 }
 
 

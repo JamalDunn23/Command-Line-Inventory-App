@@ -1,6 +1,5 @@
 const { writeJSONFile, readJSONFile, readJSONCart, writeJSONCart } = require("./src/helpers")
 const { addToCart, clearCart, updateQuanity, updateTotal, promoCode } = require("./src/shopController")
-
 const action = process.argv[2];
 const product = process.argv[3];
 
