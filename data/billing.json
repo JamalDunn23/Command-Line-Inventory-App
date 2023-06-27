@@ -29,10 +29,10 @@
   },
   {
     "uId": "gfEeUKU",
-    "name": "Bobby",
-    "priceInCents": "50",
-    "inStock": "true",
-    "ShippingAvailability": "true"
+    "name": "Shaka",
+    "priceInCents": "100000000",
+    "inStock": "false",
+    "ShippingAvailability": "false"
   },
   {
     "uId": "n7V_ceW",

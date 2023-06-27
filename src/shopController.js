@@ -7,7 +7,7 @@ function addToCart(item_SKU, productName, price, quantity) {
     let shoppingCart = [];
 
     try {
-        shoppingCart = JSON.parse(fs.readCartJSON("cart.JSON"));
+        shoppingCart = JSON.parse(fs.readCartJSON("cart.json"));
 
     } catch (error) {
 
@@ -20,7 +20,7 @@ function addToCart(item_SKU, productName, price, quantity) {
 
 };
 
-fs.writeCartJSON("cart.JSON", JSON.stringify(shoppingCart, null, 2))
+fs.writeCartJSON("cart.json", JSON.stringify(shoppingCart, null, 2))
 
 
 
